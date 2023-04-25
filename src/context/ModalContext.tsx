@@ -10,7 +10,7 @@ interface Props {
 
 type ModalContextType = {
   setModal: (node: ReactNode) => void;
-  setClickable?: Dispatch<SetStateAction<boolean>> | null;
+  setClickable?: Dispatch<SetStateAction<boolean>>;
   setScrollable?: Dispatch<SetStateAction<boolean>> | null;
 };
 
@@ -18,7 +18,9 @@ const defaultProvider: ModalContextType = {
   setModal: (n: any) => {
     return null;
   },
-  setClickable: null,
+  setClickable: (n: any) => {
+    return null;
+  },
   setScrollable: null,
 };
 

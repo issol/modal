@@ -1,7 +1,7 @@
 import useModal from '@/lib/hooks/useModal';
 import { useAppSelector } from '@/lib/hooks/useRedux';
 import { ModalType } from '@/store/modal';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 function ModalContainer() {
@@ -16,7 +16,9 @@ function ModalContainer() {
     event.stopPropagation();
     closeModal(name);
   };
-  const renderModal = modalList?.map(({ type, children, isCloseable = true }: ModalType) => {
+  const renderModal = modalList?.map(({ type, children, isCloseable }: ModalType) => {
+    console.log(isCloseable);
+
     return (
       <Overlay
         key={type}

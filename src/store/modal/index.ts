@@ -14,9 +14,9 @@ export const modalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
-      const { type, children } = action.payload;
+      const { type, children, isCloseable } = action.payload;
 
-      return state.concat({ type, children });
+      return state.concat({ type, children, isCloseable });
     },
     closeModal: (state, action) => {
       state.pop();

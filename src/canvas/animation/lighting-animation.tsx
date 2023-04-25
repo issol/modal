@@ -21,7 +21,7 @@ const StageLightingWaveAnimation: React.FC<StageLightingWaveAnimationProps> = ({
 
   let points: IPoint[] = [];
   const initPoints = () => {
-    const POINT_NUMBER = 12;
+    const POINT_NUMBER = 72;
     const POINT_GAP = canvasWidth / POINT_NUMBER;
 
     for (let i = 0; i <= POINT_NUMBER; i++) {
